@@ -20,3 +20,11 @@ function monkeyKing($n, $m) {
     }
     return current($monkeys);
 }
+
+function monkeyKingMagic($n, $m)  //n只猴，m个排除。
+{
+            $z=0;//z是王
+            for ($j = 2; $j <= $n; $j++) $z = ($z + $m) % $j;
+            return ++$z;
+}
+echo monkeyKing(5, 3);
